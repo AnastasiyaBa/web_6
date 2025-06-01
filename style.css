@@ -1,0 +1,254 @@
+/* Основные стили страницы */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #9b94f2ee;
+    /* Фиолетовый фон */
+    margin: 0;
+    padding: 20px;
+    color: antiquewhite;
+    /* Бежевый текст */
+}
+
+/* Шапка */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0 0 5px 0;
+    /* Отступ только снизу */
+    color: #000000;
+    /* Черный заголовок */
+    font-size: 24px;
+}
+
+/* Блок информации о входе */
+.auth-info {
+    background-color: #333;
+    /* Темный фон */
+    color: antiquewhite;
+    /* Бежевый текст */
+    padding: 8px 15px;
+    border-radius: 10px;
+    /* Закругленные углы */
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.auth-info h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.auth-info a {
+    color: antiquewhite;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.auth-info a:hover {
+    text-decoration: underline;
+}
+
+/* Форма входа (если нужно отдельно стилизовать) */
+/* Стили для формы входа */
+.login-form {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    /* Фиксированная ширина формы */
+    margin: 50px auto;
+    /* Центрирование по горизонтали и отступ сверху */
+    text-align: center;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    background-color: #ddd;
+    color: #333;
+    width: 80px;
+    /* Уменьшенная ширина в 3 раза (оригинал ~240px) */
+    padding: 8px;
+    margin: 5px auto;
+    /* Центрирование полей ввода */
+    border-radius: 5px;
+    border: none;
+    display: block;
+    /* Чтобы margin auto работал */
+}
+
+.login-form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: antiquewhite;
+}
+
+.login-form button {
+    background-color: #6a5acd;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px 5px 0;
+    display: inline-block;
+}
+
+.login-links {
+    margin-top: 15px;
+}
+
+.login-links a {
+    color: antiquewhite;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+}
+
+/* Основной блок формы */
+.main {
+    background-color: #000000ea;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 50px;
+    max-width: 40%;
+}
+
+/* Остальные стили оставляем как есть */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    background-color: #333;
+    border: 1px solid #555;
+    color: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+select[multiple] {
+    height: 120px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+    margin: 5px 0;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #5d4ac0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+.error {
+    border: 2px solid red;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+/* Стили для шапки с кнопками */
+header {
+    position: relative;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.auth-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.auth-btn {
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.admin-auth {
+    background-color: #d9534f;
+}
+
+.user-auth {
+    background-color: #5bc0de;
+}
+
+.auth-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .auth-buttons {
+        position: static;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .auth-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
